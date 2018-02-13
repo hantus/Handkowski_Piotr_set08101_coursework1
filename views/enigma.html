@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/enigma.css">
+  <title>Enigma Cipher</title>
+</head>
+<body >
+  <section id="header">
+    <div>
+      <div class="logo">
+        <a href="index.html" class="logo">&#169;&#237;&#960;h&#234;&#174; M&#235;</a>
+      </div>
+      <div class="options">
+        <a href="zip.html" class="options">Zip</a>
+        <a href="polyalphabeticCipher.html" class="options">Polyalphabetic Cipher</a>
+        <a href="enigma.html" class="options active"><span>&Sigma;</span>nigma</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="title">
+    <h1><span>&Sigma;</span>nigma</h1>
+  </div>
+
+  <div class="wrapper">
+    <div>
+      <div class="inOut">
+        <select id="rotor1pos">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+          <option value="h">h</option>
+          <option value="i">i</option>
+          <option value="j">j</option>
+          <option value="k">k</option>
+          <option value="l">l</option>
+          <option value="m">m</option>
+          <option value="n">n</option>
+          <option value="o">o</option>
+          <option value="p">p</option>
+          <option value="q">q</option>
+          <option value="r">r</option>
+          <option value="s">s</option>
+          <option value="t">t</option>
+          <option value="u">u</option>
+          <option value="v">v</option>
+          <option value="w">w</option>
+          <option value="x">x</option>
+          <option value="y">y</option>
+          <option value="z">z</option>
+        </select>
+        <select id="rotor2pos">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+          <option value="h">h</option>
+          <option value="i">i</option>
+          <option value="j">j</option>
+          <option value="k">k</option>
+          <option value="l">l</option>
+          <option value="m">m</option>
+          <option value="n">n</option>
+          <option value="o">o</option>
+          <option value="p">p</option>
+          <option value="q">q</option>
+          <option value="r">r</option>
+          <option value="s">s</option>
+          <option value="t">t</option>
+          <option value="u">u</option>
+          <option value="v">v</option>
+          <option value="w">w</option>
+          <option value="x">x</option>
+          <option value="y">y</option>
+          <option value="z">z</option>
+        </select>
+        <select id="rotor3pos">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+          <option value="h">h</option>
+          <option value="i">i</option>
+          <option value="j">j</option>
+          <option value="k">k</option>
+          <option value="l">l</option>
+          <option value="m">m</option>
+          <option value="n">n</option>
+          <option value="o">o</option>
+          <option value="p">p</option>
+          <option value="q">q</option>
+          <option value="r">r</option>
+          <option value="s">s</option>
+          <option value="t">t</option>
+          <option value="u">u</option>
+          <option value="v">v</option>
+          <option value="w">w</option>
+          <option value="x">x</option>
+          <option value="y">y</option>
+          <option value="z">z</option>
+        </select>
+        <span class="rotorSet">  - Rotor Settings</span>
+      </div>
+      <div class="inOut">
+        <textarea name="input" rows="8" cols="80" id="inputMessage" placeholder="Input"></textarea>
+        <button class="enigmaButton" onclick="encriptDecriptMessage()">Cipher/Decipher</button>
+        <textarea name="result" rows="8" cols="80" id="result" placeholder="Output"></textarea></div>
+
+      </div>
+      <div class="description">
+        <h1>How does it work?</h1>
+        <p>This cipher is based on enigma machine, developped in Germany in early 20th century by Arthur Sherbius, which was used during World War 2. To use this simplified version:
+          <ul>
+            <li>Set the rotors </li>
+            <li>Enter your message </li>
+            <li>Press the Cipher/Decipher button </li>
+          </ul>
+        </p>
+        <p>
+          To Decipher the message:
+          <ul>
+            <li>Set the rotors to the same position that was used to encode the message</li>
+            <li>Press the Cipher/Decipher button  </li>
+          </ul>
+        </p>
+        <p>
+          You can learn more about enigma machine <a href="https://www.youtube.com/watch?v=mcX7iO_XCFA&t=25s" id="myLink">here</a>.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+
+    </div>
+
+    <div class="navbar">
+
+    </div>
+
+
+    <script type="text/javascript"src="../js/enigma.js">
+
+    </script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>

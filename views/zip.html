@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <title>ZIP CIPHER</title>
+</head>
+<body>
+  <section id="header">
+    <div>
+      <div class="logo">
+        <a href="index.html" class="logo">&#169;&#237;&#960;h&#234;&#174; M&#235;</a>
+      </div>
+      <div class="options">
+        <a href="zip.html" class="options active">Zip</a>
+        <a href="polyalphabeticCipher.html" class="options">Polyalphabetic Cipher</a>
+        <a href="enigma.html" class="options"><span>&Sigma;</span>nigma</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="title">
+    <h1>ZIP CIPHER</h1>
+  </div>
+
+  <div class="wrapper">
+
+
+      <div>
+        <div class="inOut extraMargin">
+          <textarea name="input" rows="8" cols="80" id="inputMessage" placeholder="Input"></textarea>
+          <span>
+            <button class="polyButton zipMethod" onclick="zipMessage()">Zip</button>
+            <button class="polyButton unzipMethod" onclick="unzipMessage()">Unzip</button>
+          </span>
+
+          <textarea name="result" rows="8" cols="80" id="result" placeholder="Output"></textarea>
+        </div>
+
+      </div>
+      <div class="description">
+        <h1>How does it work?</h1>
+        <p>Zip cipher encodes a message by repositioning letters in the message. It cuts provided string in half and zips it together letter by letter form each half. To use it:</p>
+        <ul>
+          <li>Enter a message</li>
+          <li>Press the Zip button</li>
+        </ul>
+        <p>To decipher a message</p>
+        <ul>
+          <li>Enter the encoded message</li>
+          <li>Pres the Unzip button</li>
+        </ul>
+        </div>
+
+  </div>
+
+
+  <div class="navbar">
+
+  </div>
+
+  <script type="text/javascript"src="../js/zip.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
