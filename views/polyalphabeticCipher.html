@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <title>POLYALPHABETIC CIPHER</title>
 </head>
 <body>
@@ -14,6 +15,7 @@
         <a href="index.html" class="logo">&#169;&#237;&#960;h&#234;&#174; M&#235;</a>
       </div>
       <div class="options">
+        <a href="design.html" class="options"><i class="fas fa-cogs"></i></a>
         <a href="zip.html" class="options">Zip</a>
         <a href="polyalphabeticCipher.html" class="options active">Polyalphabetic Cipher</a>
         <a href="enigma.html" class="options"><span>&Sigma;</span>nigma</a>
@@ -22,33 +24,17 @@
   </section>
 
   <div class="title">
-    <h1>POLYALPHABETIC CIPHER</h1>
+    <h1 class="outsideScreen">POLYALPHABETIC CIPHER</h1>
   </div>
 
 
-  <div class="wrapper2">
+  <div class="wrapper">
 
-    <div class="description2">
-      <h1>How does it work?</h1>
-      <p>Polyalphabetic cipher is based on Caesar cipher but uses a group of keys, in a form of a word, instead of just a single number. To use the cipher</p>
-      <ul>
-        <li>Enter a key word</li>
-        <li>Enter your message</li>
-        <li>Press the Cipher button</li>
-      </ul>
-      <p>
-        To decipher a message:
-      </p>
-      <ul>
-        <li>Enter the same key word that was used to cipher the message</li>
-        <li>Enter the encoded message</li>
-        <li>Press the Decipher button</li>
-      </ul>
-      <p>You can learn more about the polyalphabetic cipher <a href="https://www.youtube.com/watch?v=BgFJD7oCmDE">here</a></p>
-      </div>
+
+
       <div>
         <div class="inOut">
-          <input type="text" id="enteredKey" placeholder="Enter Key">
+          <input type="text" id="enteredKey" placeholder=" Enter Key">
         </div>
         <div class="inOut">
           <textarea name="input" rows="8" cols="80" id="inputMessage" placeholder="Input"></textarea>
@@ -61,12 +47,52 @@
         </div>
 
       </div>
+      <div class="description">
+        <h1>How does it work?</h1>
+        <p>Polyalphabetic cipher is based on Caesar cipher, but uses a group of keys, in a form of a word, instead of just a single number. To use the cipher</p>
+        <ul>
+          <li>Enter a key word</li>
+          <li>Enter your message (use only a-z characters)</li>
+          <li>Press the Cipher button</li>
+        </ul>
+        <p>
+          To decipher a message:
+        </p>
+        <ul>
+          <li>Enter the same key word that was used to cipher the message</li>
+          <li>Enter the encoded message</li>
+          <li>Press the Decipher button</li>
+        </ul>
+        <p>You can learn more about the polyalphabetic cipher <span id="myLink" class="underlined">here</a></p>
+        </div>
+
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Caesar Cipher & Polyalphabetic Cipher</h1>
+      <p>Caesar cipher is one of the simplest and most widely known encryption techniquyes. It is a type of substitution cipher in which earch letter in the plaintext is replaced by a letter some fixed number of positions down the alphaber. This cipher is named after julius Caesar who used it with a shift of three to protect messages of military significance. It is unknown how effective the Caesar cipher was at the time, but it is likely to have been reasonably sedure, not least because most of Caesar's enemies would have been illiterate and others assumed that the messages were written in an unknown foreigh language. In April 2006, fugitive mafia boss Bernardo Provenzano was captured in Sicily partly because some of his messages, clumsily written in a variation of the Caesar cipher were broken.</p>
+      <p><a href="https://www.youtube.com/watch?v=sMOZf4GN3oc">Here</a> you can learn more about the Caesar cipher</p>
+      <p>
+        Polyalphabetic cipher is based on Caesar cipher, but it is using multiple substitution alphabets. The Vigenère cipher is probably the best-known example of a polyalphabetic cipher. The enigma machine is more complex, but is still fundamentally a polyalphabetic substitution cipher. The security of polyalphabetic cipher is greater than of a Caesar cipher and can grow with the length of the key used to cipher the message.
+      </p>
+      <p>
+
+      </p>
+      <p>
+        To see how exactly how the polyalphabetic cipher works follow <a href="https://www.youtube.com/watch?v=BgFJD7oCmDE">this</a> link.
+      </p>
+    </div>
 
   </div>
 
 
 
-  <div class="navbar">
+  <div class="footer">
 
   </div>
 

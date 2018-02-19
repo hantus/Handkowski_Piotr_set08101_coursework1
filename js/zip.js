@@ -55,7 +55,7 @@ function zipMessage(){
     return;
   }
   var result = zip(message);
-  document.getElementById("result").innerHTML = result;
+  document.getElementById("result").value = result;
 }
 
 // document.getElementsByClassName('zipMethod').onclick = zipMessage();
@@ -67,7 +67,7 @@ function unzipMessage(){
     return;
   }
   var result = unzip(message);
-  document.getElementById("result").innerHTML = result;
+  document.getElementById("result").value = result;
 }
 
 // document.getElementsByClassName('unzipMethod').onclick = unzipMessage();

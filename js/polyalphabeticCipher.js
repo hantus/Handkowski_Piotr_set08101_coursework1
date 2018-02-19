@@ -52,13 +52,15 @@ function encodedLetterPosition(letter, level){
 function decodeKey(key){
   var decodedKey = [];
   for (var i = 0; i < key.length; i++) {
-    decodedKey.push(letterPosition(key[i]));
+    decodedKey.push(letterPosition(key[i].toLowerCase()));
   }
   console.log("decodeKey method reutrns" + decodedKey)
   return decodedKey;
 }
 
-
+function isLetter(char) {
+  return char.match(/[a-z]/i);
+}
 // encodes a message according to provided key
 // works similar to Caesar cipher but instead of just one number it uses a combination of them
 function encodeMessage(message, key){
@@ -76,7 +78,10 @@ function encodeMessage(message, key){
       result = result.concat(message[i]);
       continue;
     }
-    var letterPos = letterPosition(message[i]);
+    if(!isLetter(message[i])){
+      continue;
+    }
+    var letterPos = letterPosition(message[i].toLowerCase());
     console.log(letterPos);
     // selects a letter from the correct table at the same position as the letter to be encoded
     var encodedChar = polyalphabeticTable[keyPosition][letterPos];
@@ -93,6 +98,8 @@ function encodeMessage(message, key){
 }
 
 
+
+
 function decodeMessage(message, key){
   var result = "";
   var decodedKey = decodeKey(key);
@@ -104,12 +111,14 @@ function decodeMessage(message, key){
   for (var i = 0; i < message.length; i++) {
       console.log("index " + index)
     var keyPosition = decodedKey[index]; // checks which table was used to encode the letter
-    console.log(message[i]);
-    console.log("keyPosition "+keyPosition);
+    var char = message[i];
+    console.log(char);
+    console.log("keyPosition "+ keyPosition);
     if(message[i] == " "){
-      result = result.concat(message[i]);
+      result = result.concat(char);
       continue;
     }
+
     var letterPos = encodedLetterPosition(message[i], keyPosition); // checks at which position was the encoded letter
     console.log(letterPos);
     var decodedChar = polyalphabeticTable[0][letterPos]; // selects a letter from the 1st (not encoded) table
@@ -139,7 +148,7 @@ function cipherButtonFunction(){
 
 
   var result = encodeMessage(message, enteredKey);
-  document.getElementById("result").innerHTML = result;
+  document.getElementById("result").value = result;
 
 
 }
@@ -156,9 +165,5 @@ function decipherButtonFunction(){
   }
 
   var result = decodeMessage(message, enteredKey);
-  document.getElementById("result").innerHTML = result;
+  document.getElementById("result").value = result;
 }
-
-// document.getElementsByClassName('cipherMethod').onclick = cipherButtonFunction();
-// document.getElementsByClassName('decipherMethod').onclick = decipherButtonFunction();
-// document.getElementsByClassName('enigmaButton').onclick = encriptDecriptMessage();

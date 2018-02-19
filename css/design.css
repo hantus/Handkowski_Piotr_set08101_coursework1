@@ -1,0 +1,43 @@
+#mainSection{
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  color: black;
+  font-family: sans-serif;
+
+}
+
+.subsection{
+  margin:15px;
+  padding: 10px;
+}
+/* a class dividing a containter into 2 sections used in design document */
+.wrapper2{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.fant-font{
+  font-family: fantasy;
+}
+
+.exampleContainer{
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  background-image: url("../src/nathan-anderson-147966.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.exampleContainerLafge{
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  background-image: url("../src/nathan-anderson-147966.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+}

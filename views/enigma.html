@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <link rel="stylesheet" type="text/css" href="../css/enigma.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <title>Enigma Cipher</title>
 </head>
 <body >
@@ -15,6 +16,7 @@
         <a href="index.html" class="logo">&#169;&#237;&#960;h&#234;&#174; M&#235;</a>
       </div>
       <div class="options">
+        <a href="design.html" class="options"><i class="fas fa-cogs"></i></a>
         <a href="zip.html" class="options">Zip</a>
         <a href="polyalphabeticCipher.html" class="options">Polyalphabetic Cipher</a>
         <a href="enigma.html" class="options active"><span>&Sigma;</span>nigma</a>
@@ -23,7 +25,7 @@
   </section>
 
   <div class="title">
-    <h1><span>&Sigma;</span>nigma</h1>
+    <h1 class="outsideScreen"><span>&Sigma;</span>nigma</h1>
   </div>
 
   <div class="wrapper">
@@ -126,7 +128,7 @@
         <p>This cipher is based on enigma machine, developped in Germany in early 20th century by Arthur Sherbius, which was used during World War 2. To use this simplified version:
           <ul>
             <li>Set the rotors </li>
-            <li>Enter your message </li>
+            <li>Enter your message (use only a-z characters) </li>
             <li>Press the Cipher/Decipher button </li>
           </ul>
         </p>
@@ -138,11 +140,13 @@
           </ul>
         </p>
         <p>
-          You can learn more about enigma machine <a href="https://www.youtube.com/watch?v=mcX7iO_XCFA&t=25s" id="myLink">here</a>.
+          You can learn the forgotten history of Enigma machine by clicking <span id="myLink" class="underlined">here</span>.
         </p>
       </div>
 
     </div>
+
+
 
 
     <!-- The Modal -->
@@ -151,12 +155,22 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <h1>The Forgotten History of Enigma</h1>
+        <p>Enigma is a electro-mechanical rotor cipher machine developped and used in Germany in early to mid 20th century. The early models were initially used comercially, but were soon adopted by the military and used by Nazi Germany before and  during World War 2.</p>
+        <p>
+          In 1932, a Polish mathematician and cryptanalyst working at Polish Cipher Bureau, Marian Rajewski, used the theory of premuitations and flaws in the German Military message encipherment procedures to break the message keys of the plugboard Enigma machine. He has managed to acheive this result without the knowledge of the wiring of the machine, therefore this did not allow the Poles to decrypt actual messages. When a French spy, Hans-Tho Schnidt obtained access to German cipher materials that included the daily keys used in September and October 1932, this allowed to solve the unknown rotor wiring. Consequently, the Polish mathematicians were able to build their own Enigma, which was called Enigma doubles. Rajewski was aided by cryptanalysts Jerzy Rozycki and Henryk Zygalski and together they developed techniques to defeat the plugboard and find all components of the daily key and in turn read the German Enigma messages. Over the time, the German cryptographic procedures improved and the Cipher Bureau developed new techniques and designed mechanical devices to continue breaking the Enigma trafic. As part of that effort, the Poles exploited quirks of the rotors, compiled catalogues, built a cyclometer to help make a catalogue with 100,000 entries, and built the elector-mechanical criptologic bomb to search for rotor settings. In 1938, the Germans added complexity to the machine that made it to expensive for the Poles to counter. The Poles had six bombs, but when Germans added two more rotors, ten times as many bombs were needed, but the Poles did not have the resources.
+        </p>
+        <p>
+          On 26 and 27 July 1939, in Pyry near Warsaw, the Poles initiated French and British military intelligence representatives into their Enigma-decryption techniques and equipment and primised each delegation a Polish-recinstructed Enigma. The dempnstration represented a vital basis for the later British continuation and effort. During the war, British cryptologists, including Alan Turing,  decrypted a vast number of messages encripted on Enigma.
+        </p>
+        <p>
+          If you are interested in how exactly the Enigma machine workes follow <a href="https://www.youtube.com/watch?v=mcX7iO_XCFA&t=28s">this</a> link.
+        </p>
       </div>
 
     </div>
 
-    <div class="navbar">
+    <div class="footer">
 
     </div>
 
@@ -166,4 +180,4 @@
     </script>
     <script type="text/javascript" src="../js/main.js"></script>
   </body>
-</html>
+  </html>
