@@ -1,4 +1,4 @@
-//  title animation
+//  title animation used on each cipher page
 var item2 = document.querySelector('.outsideScreen');
 setTimeout(function(){ item2.classList.remove('outsideScreen'); }, 10);
 
@@ -9,17 +9,17 @@ setTimeout(function(){ item2.classList.remove('outsideScreen'); }, 10);
 //----------------
 
 
-// Get the modal
+
 var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
-var btn = document.getElementById("myLink");
+// gets the link to the modal
+var link = document.getElementById("myLink");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+// When the user clicks on the link, open the modal
+link.onclick = function() {
     modal.style.display = "block";
 }
 

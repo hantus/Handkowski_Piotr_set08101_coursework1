@@ -22,8 +22,6 @@ function divide(string){
 function zip(string){
   var string1 = reverseString(divide(string)[0]);
   var string2 = reverseString(divide(string)[1]);
-  console.log(string1);
-  console.log(string2);
   var result = "";
   for (var i = 0; i < string1.length; i++) {
     result += string1[i]+string2[i];
@@ -42,12 +40,10 @@ function unzip(string){
       string2 += string[i];
     }
   }
-  console.log(string1);
-  console.log(string2);
 
   return reverseString(string1) + reverseString(string2);
 }
-
+// ciphers a message
 function zipMessage(){
   var message = document.getElementById("inputMessage").value;
   if(message == ""){
@@ -69,5 +65,3 @@ function unzipMessage(){
   var result = unzip(message);
   document.getElementById("result").value = result;
 }
-
-// document.getElementsByClassName('unzipMethod').onclick = unzipMessage();

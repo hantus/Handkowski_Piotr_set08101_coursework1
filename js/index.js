@@ -1,3 +1,4 @@
+// code to animate logo and desctiption on the home page
 var item = document.querySelector('#myLogo');
 var description = document.querySelector('.indexText');
 

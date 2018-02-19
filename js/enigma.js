@@ -267,14 +267,6 @@ function rotate3(){
     }
   }
 
-  // turns rotor 2 once a full turn has been made ///////////////////////
-  // rotor3.forEach(function(item){
-  //   if(item.pos == 2 && item.val == "v"){
-  //     rotate2();
-  //     console.log("rotor 2 has been triggered");
-  //
-  //   }
-  // });
   for (var i = 0; i < 24; i++) {
     var counter = 0;
     if(rotor3[i].pos == 2){
@@ -321,14 +313,6 @@ function rotate2(){
     }
 
   }
-
-  // turns rotor 1 once a full turn has been made
-  // rotor2.forEach(function(item){
-  //   if(item.pos == 2 && item.val == "e"){
-  //     rotate1();
-  //     console.log("rotor 1 has been triggered");
-  //   }
-  // });
 
   // adding 1 to the value of prev on rotor 3
   for (i = 0; i < 26; i++) {
@@ -401,7 +385,7 @@ function rotate1(){
   }
 }
 
-
+// check if provided char is a letter
 function isLetter(char) {
   return char.match(/[a-z]/i);
 }
@@ -440,8 +424,6 @@ function setRotor3(char){
       }
     });
   }
-
-
   var currentPos;
   // checks the current position of the character
   rotor3.forEach(function(item){
@@ -491,28 +473,21 @@ function setRotor1(char){
   }
 }
 function encriptDecriptMessage(){
+  // get the rotor values entered by the user
   var r3 = document.getElementById('rotor3pos');
   var rotor3position = r3.options[r3.selectedIndex].value;
-  console.log(rotor3position);
   var r2 = document.getElementById('rotor2pos');
   var rotor2position = r2.options[r2.selectedIndex].value;
-  console.log(rotor2position);
   var r1 = document.getElementById('rotor1pos');
   var rotor1position = r1.options[r1.selectedIndex].value;
-  console.log(rotor1position);
-
-
+  // set the rotors to the values entered by the user
   setRotor3(rotor3position);
   setRotor2(rotor2position);
   setRotor1(rotor1position);
 
-
-  console.log("completed");
-
   var message = document.getElementById('inputMessage').value;
-  console.log(message);
+
   var encripted = cipherDecipher(message);
-  console.log(encripted);
 
   document.getElementById('result').value = encripted;
 

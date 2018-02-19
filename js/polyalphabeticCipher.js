@@ -1,4 +1,4 @@
-
+// poly alphabets
 var levelA = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var levelB = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a"];
 var levelC = ["c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b"];
@@ -26,7 +26,7 @@ var levelX = ["x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "
 var levelY = ["y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"];
 var levelZ = ["z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"];
 
-
+// puts all alphabets in an array
 var polyalphabeticTable = [levelA, levelB, levelC, levelD, levelE, levelF, levelG, levelH, levelI, levelJ, levelK, levelL, levelM, levelN, levelO, levelP, levelQ, levelR, levelS, levelT, levelU, levelV, levelW, levelX, levelY, levelZ];
 
 
@@ -54,7 +54,6 @@ function decodeKey(key){
   for (var i = 0; i < key.length; i++) {
     decodedKey.push(letterPosition(key[i].toLowerCase()));
   }
-  console.log("decodeKey method reutrns" + decodedKey)
   return decodedKey;
 }
 
@@ -66,14 +65,10 @@ function isLetter(char) {
 function encodeMessage(message, key){
   var result = "";
   var decodedKey = decodeKey(key);
-  console.log(decodedKey);
-  // console.log(decodedKey);
   var index = 0; //  the position of the number from the key
   var keyLastPosition = key.length - 1;
   for (var i = 0; i < message.length; i++) {
     var keyPosition = decodedKey[index]; // represents the appropriate table to be used (from 26 tables)
-    console.log("keyPosition = " +keyPosition);
-    console.log("char to be encoded "+message[i]);
     if(message[i] == " "){ // spaces are not encripted
       result = result.concat(message[i]);
       continue;
@@ -82,47 +77,37 @@ function encodeMessage(message, key){
       continue;
     }
     var letterPos = letterPosition(message[i].toLowerCase());
-    console.log(letterPos);
     // selects a letter from the correct table at the same position as the letter to be encoded
     var encodedChar = polyalphabeticTable[keyPosition][letterPos];
-    console.log("encodedChar " +encodedChar);
     result += encodedChar;
     if(index == keyLastPosition){
       index = 0;
     }else{
       index++;
     }
-    console.log("index " + index);
   }
   return result;
 }
 
 
 
-
+// decodes a message
 function decodeMessage(message, key){
   var result = "";
   var decodedKey = decodeKey(key);
-  console.log(decodedKey);
   var index = 0;
 
   var keyLastPosition = key.length - 1;
-  console.log("key last position " +keyLastPosition);
   for (var i = 0; i < message.length; i++) {
-      console.log("index " + index)
     var keyPosition = decodedKey[index]; // checks which table was used to encode the letter
     var char = message[i];
-    console.log(char);
-    console.log("keyPosition "+ keyPosition);
     if(message[i] == " "){
       result = result.concat(char);
       continue;
     }
 
     var letterPos = encodedLetterPosition(message[i], keyPosition); // checks at which position was the encoded letter
-    console.log(letterPos);
     var decodedChar = polyalphabeticTable[0][letterPos]; // selects a letter from the 1st (not encoded) table
-    console.log(decodedChar);
     result += decodedChar;
     if(index == keyLastPosition){
       index = 0;
@@ -135,12 +120,10 @@ function decodeMessage(message, key){
 
 
 
-
+// gets the message and key entered by user and ciphers it
 function cipherButtonFunction(){
   var enteredKey = document.getElementById('enteredKey').value;
-  console.log(enteredKey);
   var message = document.getElementById("inputMessage").value;
-  console.log(message);
   if(enteredKey == "" || message == ""){
     alert("Please enter key and message to de ciphered/deciphered!");
     return;
@@ -153,11 +136,10 @@ function cipherButtonFunction(){
 
 }
 
+// gets the message and key entered by user and deciphers it
 function decipherButtonFunction(){
   var enteredKey = document.getElementById('enteredKey').value;
-  console.log(enteredKey);
   var message = document.getElementById("inputMessage").value;
-  console.log(message);
 
   if(enteredKey == "" || message == ""){
     alert("Please enter key and message to de ciphered/deciphered!");
