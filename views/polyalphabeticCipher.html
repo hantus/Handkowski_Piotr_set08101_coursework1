@@ -9,6 +9,7 @@
   <title>POLYALPHABETIC CIPHER</title>
 </head>
 <body>
+  <!-- NAVBAR -->
   <section id="header">
     <div>
       <div class="logo">
@@ -22,16 +23,13 @@
       </div>
     </div>
   </section>
-
+  <!-- CIPHER NAME -->
   <div class="title">
     <h1 class="outsideScreen">POLYALPHABETIC CIPHER</h1>
   </div>
 
-
   <div class="wrapper">
-
-
-
+      <!-- CONTROLS TO CIPHER AND DECIPHER MESSAGES -->
       <div>
         <div class="inOut">
           <input type="text" id="enteredKey" placeholder=" Enter Key">
@@ -42,11 +40,10 @@
             <button class="polyButton cipherMethod" id="cipherButtonPoly" onclick="cipherButtonFunction()" >Cipher</button>
             <button class="polyButton decipherMethod" id="decipherButton" onclick="decipherButtonFunction()">Decipher</button>
           </span>
-
           <textarea name="result" rows="8" cols="80" id="result" placeholder="Output"></textarea>
         </div>
-
       </div>
+      <!-- DESCRIPTION OF THE CIPHER -->
       <div class="description">
         <h1>How does it work?</h1>
         <p>Polyalphabetic cipher is based on Caesar cipher, but uses a group of keys, in a form of a word, instead of just a single number. To use the cipher</p>
@@ -65,13 +62,10 @@
         </ul>
         <p>You can learn more about the polyalphabetic cipher <span id="myLink" class="underlined">here</a></p>
         </div>
-
   </div>
 
-  <!-- The Modal -->
+  <!-- MODAL PROVIDING MORE INFORMATION ABOUT THE CIPHER AND A LINK TO YOUTUBE VIDEOS -->
   <div id="myModal" class="modal">
-
-    <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
       <h1>Caesar Cipher & Polyalphabetic Cipher</h1>
@@ -81,19 +75,13 @@
         Polyalphabetic cipher is based on Caesar cipher, but it is using multiple substitution alphabets. The Vigenère cipher is probably the best-known example of a polyalphabetic cipher. The enigma machine is more complex, but is still fundamentally a polyalphabetic substitution cipher. The security of polyalphabetic cipher is greater than of a Caesar cipher and can grow with the length of the key used to cipher the message.
       </p>
       <p>
-
-      </p>
-      <p>
         To see how exactly how the polyalphabetic cipher works follow <a href="https://www.youtube.com/watch?v=BgFJD7oCmDE">this</a> link.
       </p>
     </div>
-
   </div>
 
-
-
   <div class="footer">
-
+  <!-- BLACK FOOTER CAN BE USED TO PROVIDE EXTRA FUNCTIONALITY IN THE FUTURE -->
   </div>
 
   <script type="text/javascript"src="../js/polyalphabeticCipher.js"></script>

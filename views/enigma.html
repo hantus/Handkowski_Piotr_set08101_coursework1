@@ -10,6 +10,7 @@
   <title>Enigma Cipher</title>
 </head>
 <body >
+  <!-- NAVBAR -->
   <section id="header">
     <div>
       <div class="logo">
@@ -23,11 +24,11 @@
       </div>
     </div>
   </section>
-
+  <!-- CIPHER NAME -->
   <div class="title">
     <h1 class="outsideScreen"><span>&Sigma;</span>nigma</h1>
   </div>
-
+  <!-- ROTOR SETTINGS -->
   <div class="wrapper">
     <div>
       <div class="inOut">
@@ -117,12 +118,13 @@
         </select>
         <span class="rotorSet">  - Rotor Settings</span>
       </div>
+      <!-- CONTROLS TO CIPHER & DECIPHER MESSAGES -->
       <div class="inOut">
         <textarea name="input" rows="8" cols="80" id="inputMessage" placeholder="Input"></textarea>
         <button class="enigmaButton" onclick="encriptDecriptMessage()">Cipher/Decipher</button>
         <textarea name="result" rows="8" cols="80" id="result" placeholder="Output"></textarea></div>
-
       </div>
+      <!-- DESCRITION OF THE CIPHER -->
       <div class="description">
         <h1>How does it work?</h1>
         <p>This cipher is based on enigma machine, developped in Germany in early 20th century by Arthur Sherbius, which was used during World War 2. To use this simplified version:
@@ -149,10 +151,8 @@
 
 
 
-    <!-- The Modal -->
+    <!-- MODAL PROVIDING ADDITIONAL INFORMATION ABOUT THE CIPHER -->
     <div id="myModal" class="modal">
-
-      <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <h1>The Forgotten History of Enigma</h1>
@@ -163,15 +163,14 @@
         <p>
           On 26 and 27 July 1939, in Pyry near Warsaw, the Poles initiated French and British military intelligence representatives into their Enigma-decryption techniques and equipment and primised each delegation a Polish-recinstructed Enigma. The dempnstration represented a vital basis for the later British continuation and effort. During the war, British cryptologists, including Alan Turing,  decrypted a vast number of messages encripted on Enigma.
         </p>
+        <!-- LINK TO A YOUTUBE VIDEO -->
         <p>
           If you are interested in how exactly the Enigma machine workes follow <a href="https://www.youtube.com/watch?v=mcX7iO_XCFA&t=28s">this</a> link.
         </p>
       </div>
-
     </div>
-
     <div class="footer">
-
+      <!-- BLACK FOOTER CAN BE USED IN THE FUTURE FOR ADDITIONAL FEATURES -->
     </div>
 
 
@@ -180,4 +179,4 @@
     </script>
     <script type="text/javascript" src="../js/main.js"></script>
   </body>
-  </html>
+</html>

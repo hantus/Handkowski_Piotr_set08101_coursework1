@@ -9,6 +9,7 @@
   <title>ZIP CIPHER</title>
 </head>
 <body>
+  <!-- NAVBAR -->
   <section id="header">
     <div>
       <div class="logo">
@@ -22,45 +23,41 @@
       </div>
     </div>
   </section>
-
+  <!-- CIPHER NAME -->
   <div class="title">
     <h1 class="outsideScreen">ZIP CIPHER</h1>
   </div>
 
   <div class="wrapper">
-
-
-      <div>
-        <div class="inOut extraMargin">
-          <textarea name="input" rows="8" cols="80" id="inputMessage" placeholder="Input"></textarea>
-          <span>
-            <button class="polyButton zipMethod" onclick="zipMessage()">Zip</button>
-            <button class="polyButton unzipMethod" onclick="unzipMessage()">Unzip</button>
-          </span>
-
-          <textarea name="result" rows="8" cols="80" id="result" placeholder="Output"></textarea>
-        </div>
-
+    <!-- CONTROLS TO CIPHER AND DECIPHER MESSAGES -->
+    <div>
+      <div class="inOut extraMargin">
+        <textarea name="input" rows="8" cols="80" id="inputMessage" placeholder="Input"></textarea>
+        <span>
+          <button class="polyButton zipMethod" onclick="zipMessage()">Zip</button>
+          <button class="polyButton unzipMethod" onclick="unzipMessage()">Unzip</button>
+        </span>
+        <textarea name="result" rows="8" cols="80" id="result" placeholder="Output"></textarea>
       </div>
-      <div class="description">
-        <h1>How does it work?</h1>
-        <p>Zip cipher encodes a message by repositioning letters in the message. It cuts provided string in half and zips it together letter by letter form each half. To use it:</p>
-        <ul>
-          <li>Enter a message</li>
-          <li>Press the Zip button</li>
-        </ul>
-        <p>To decipher a message</p>
-        <ul>
-          <li>Enter the encoded message</li>
-          <li>Pres the Unzip button</li>
-        </ul>
-        </div>
-
+      <!-- CIPHER DESCRIPTION -->
+    </div>
+    <div class="description">
+      <h1>How does it work?</h1>
+      <p>Zip cipher encodes a message by repositioning letters in the message. It cuts provided string in half and zips it together letter by letter form each half. To use it:</p>
+      <ul>
+        <li>Enter a message</li>
+        <li>Press the Zip button</li>
+      </ul>
+      <p>To decipher a message</p>
+      <ul>
+        <li>Enter the encoded message</li>
+        <li>Pres the Unzip button</li>
+      </ul>
+    </div>
   </div>
 
-
   <div class="footer">
-
+    <!-- BLACK FOOTER CAN BE USED TO PROVIDE EXTRA FUNCTIONALITY IN THE FUTURE -->
   </div>
 
   <script type="text/javascript"src="../js/zip.js"></script>

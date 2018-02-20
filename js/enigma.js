@@ -231,7 +231,7 @@ function rotate3(){
     rotor3prev.push(rotor3[i].prev);
   }
 
-// changing posiiton of the letters and next values
+  // changing posiiton of the letters and next values
   for (i = 0; i < 26; i++) {
     if(rotor3[i].next == 26){
       rotor3[i].next = 1;
@@ -299,7 +299,7 @@ function rotate2(){
     rotor2prev.push(rotor2[i].prev);
   }
 
-// changing posiiton of the letters and next values
+  // changing posiiton of the letters and next values
   for (i = 0; i < 26; i++) {
     if(rotor2[i].next == 26){
       rotor2[i].next = 1;
@@ -360,7 +360,7 @@ function rotate1(){
   }
 
 
-// changing posiiton of the letters and next values
+  // changing posiiton of the letters and next values
   for (i = 0; i < 26; i++) {
     if(rotor1[i].next == 26){
       rotor1[i].next = 1;
