@@ -17,6 +17,7 @@
 .wrapper2{
   display: grid;
   grid-template-columns: 1fr 2fr;
+  border-bottom: 2px solid rgba(27,18,43, 0.1);
 }
 
 /* class to display fantasy font */
